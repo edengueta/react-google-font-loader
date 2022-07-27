@@ -15,6 +15,7 @@ const createLink = (fonts, subsets, display) => {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = `https://fonts.googleapis.com/css?family=${families}`;
+    link.crossOrigin = 'anonymous';
 
     if (subsets && Array.isArray(subsets) && subsets.length > 0) {
         link.href += `&subset=${subsets.join(',')}`;
